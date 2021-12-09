@@ -75,54 +75,43 @@
 <h2>お問い合わせフォーム</h2>
 
 <!-- フォームの情報はここからです -->
-<form name="form1" enctype="multipart/form-data" method="post" action="?php echo $_SERVER["REQUEST_URI>">
-	<input type="hidden" name="mode" value="form">
-	
-	<table class="ta1">
-	<!-- 入力／確認 -->
-	<!--<tr><th class="tamidashi" colspan="2">お問い合わせフォーム</th></tr>-->
-	<tr>
-	<th width="150">お名前<span style="color:red">※</span></th>
-	<td>
-	<input name="item1" value="" type="text" size="40" maxlength="500" class="ws" required>
-	</td>
-	</tr>
-	<tr>
-	<th width="150">メールアドレス<span style="color:red">※</span></th>
-	<td>
-	<input name="item2" value="" type="email" size="40" maxlength="500" class="ws" required>
-	</td>
-	</tr>
-	<tr>
-	<th width="150">電話番号(ハイフンなし)<span style="color:red">※</span></th>
-	<td>
-	<input name="item1" value="" type="tel" pattern="[\d]{10,}"　size="40" maxlength="500" class="ws" required>
-	</td>
-	</tr>
-	<tr>
-	<th width="150">ご利用状況<span style="color:red">※</span></th>
-	<td>
-	<input type="radio" name="select" value="a" required>障がい者
-	&emsp;
-	<input type="radio" name="select" value="b" required>企業(人事)
-	</td>
-	</tr>
-	<tr>
-	<th>お問い合わせ内容<span style="color:red">※</span></th>
-	<td>
-	<textarea name="item3" cols="40" rows="10" class="wl">できるだけ詳しくお願いします</textarea>
-	</td>
-	</tr>
-	</table>
-	
-	<div class="c">
-	<input type="submit" value="内容を確認する" a href="./form check.html" class="btn">
-	&nbsp;
-	<input type="reset" value="リセット" class="btn">
-	</div>
-	
-	</form>
-	<!-- フォームの情報はここまでです -->
+<form name="form1" enctype="multipart/form-data" method="post" action="<?php echo $_SERVER["REQUEST_URI"];?>">
+<input type="hidden" name="mode" value="form">
+
+<table class="ta1">
+<!-- 入力／確認 -->
+<!--<tr><th class="tamidashi" colspan="2">お問い合わせフォーム</th></tr>-->
+<tr>
+<th width="150">お名前<span style="color:red">※</span></th>
+<td>
+<input name="item1" value="<?php echo $form["item1"];?>" type="text" size="40" maxlength="500" class="ws">
+<?php if ($msg["item1"]) echo '<div style="color:red">' . $msg["item1"] . '</div>'; ?>
+</td>
+</tr>
+<tr>
+<th width="150">メールアドレス<span style="color:red">※</span></th>
+<td>
+<input name="item2" value="<?php echo $form["item2"];?>" type="text" size="40" maxlength="500" class="ws">
+<?php if ($msg["item2"]) echo '<div style="color:red">' . $msg["item2"] . '</div>'; ?>
+</td>
+</tr>
+<tr>
+<th>お問い合わせ内容<span style="color:red">※</span></th>
+<td>
+<textarea name="item3" cols="40" rows="10" class="wl"><?php echo $form["item3"]; ?></textarea>
+<?php if ($msg["item3"]) echo '<div style="color:red">' . $msg["item3"] . '</div>'; ?>
+</td>
+</tr>
+</table>
+
+<div class="c">
+<input type="submit" value="内容を確認する" class="btn">
+&nbsp;
+<input type="reset" value="リセット" class="btn">
+</div>
+
+</form>
+<!-- フォームの情報はここまでです -->
 
 </section>
 
