@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
@@ -73,10 +72,83 @@
 <section>
 
 <h2>フィードバックフォーム</h2>
-<p>見学をご希望の方はまずはお電話下さい。<br>
-電話受付：AM8:00〜PM8:00</p>
 
-<p class="big1">TEL：0120-XXX-XXX</p>
+<!-- フォームの情報はここからです -->
+<form name="form1" enctype="multipart/form-data" method="post" action="?php echo $_SERVER["REQUEST_URI>">
+	<input type="hidden" name="mode" value="form">
+	<table class="ta1">
+	<!-- 入力／確認 -->
+	<!--<tr><th class="tamidashi" colspan="2">お問い合わせフォーム</th></tr>-->
+	<tr>
+	<th width="150">お名前<span style="color:red">※</span></th>
+	<td>
+	<input name="item1" value="" type="text" size="40" maxlength="500" class="ws" required>
+	</td>
+	</tr>
+	<tr>
+	<th width="150">フリガナ<span style="color:red">※</span></th>
+	<td>
+	<input name="item2" value="" type="text" size="40" maxlength="500" class="ws" required>
+	</td>
+	</tr>
+	<tr>
+	<th width="150">勤務先<span style="color:red">※</span></th>
+	<td>
+	<input name="item1" value="" type="text" size="40" maxlength="500" class="ws" required>
+	</td>
+	</tr>
+	<tr>
+    <th width="150">障がい種<span style="color:red">※</span></th>
+    <td>
+    <input name="item1" value="" type="text" size="40" maxlength="500" class="ws" required>
+    </td>
+    </tr>
+    <tr>
+    <th width="150">働いた時間<span style="color:red">※</span></th>
+    <td>
+    <input   type="text" size="10" width="10px" maxlength="2"  required> &nbsp;～
+    <input   type="text" size="10" width="10px" maxlength="2"  required>&nbsp;時
+    </td>
+    </tr>
+    <tr>
+    <th width="150">満足度<span style="color:red">※</span></th>
+    <td>
+        <div class="review">
+			<div class="stars">
+			  <span>
+				<input id="review01" type="radio" name="review"><label for="review01">非常に低い</label>
+				<input id="review02" type="radio" name="review"><label for="review02">低い</label>
+				<input id="review03" type="radio" name="review"><label for="review03">普通</label>
+				<input id="review04" type="radio" name="review"><label for="review04">高い</label>
+				<input id="review05" type="radio" name="review"><label for="review05">非常に高い</label>
+			  </span>
+			</div>
+		  </div>
+    </td>
+    </tr>
+	<tr>
+	<th>要望<span style="color:red">※</span></th>
+	<td>
+	<textarea name="item3" cols="40" rows="10" class="wl">できるだけ詳しくお願いします</textarea>
+	</td>
+	</tr>
+	<tr>
+	<th>掲載（企業詳細ページ）可<span style="color:red">※</span></th>
+	<td>
+	<input type="checkbox" name="con" value="can" checked>可
+	</td>
+	</tr>
+	</table>
+	
+	<div class="c">
+	  <input type="submit" value="送信する"  class="btn">
+	  &nbsp;
+	  <input type="reset" value="リセット" class="btn">
+	</form>
+	</div>
+	
+	</form>
+	<!-- フォームの情報はここまでです -->
 
 </section>
 
@@ -99,15 +171,7 @@
 </ul>
 </nav>
 
-<nav>
-<ul class="submenu">
-<li><a href="company.html">会社概要</a></li>
-<li><a href="#">メニューサンプル</a></li>
-<li><a href="#">メニューサンプル</a></li>
-<li><a href="#">メニューサンプル</a></li>
-<li><a href="#">メニューサンプル</a></li>
-</ul>
-</nav>
+
 
 </div>
 <!--/#sub-->
@@ -160,3 +224,4 @@ if (OCwindowWidth() <= 900) {
 
 </body>
 </html>
+<!DOCTYPE html>
