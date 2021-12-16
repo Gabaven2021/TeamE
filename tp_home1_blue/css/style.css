@@ -815,4 +815,28 @@ header #logo {
 .ws,.wl {width: 94%;}
 
 }
+/*boxの追加(service.html、info.htmlで使用)*/
+.box7{
+    padding: 0.5em 1em;
+    margin: 2em 0;
+    color: #474747;
+    background: whitesmoke;/*背景色*/
+    border-left: double 7px #4ec4d3;/*左線*/
+    border-right: double 7px #4ec4d3;/*右線*/
+}
+.box7 p {
+    margin: 0; 
+    padding: 0;
+}
 
+.box8 {
+    padding: 0.5em 1em;
+    margin: 2em 0;
+    color: #232323;
+    background: #fff8e8;
+    border-left: solid 10px #ffc06e;
+}
+.box8 p {
+    margin: 0; 
+    padding: 0;
+}
