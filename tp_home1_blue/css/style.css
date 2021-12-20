@@ -86,17 +86,17 @@ header #logo {
 }
 #headermenu li a {
 	text-decoration: none;display: block;
-	background: #ff8a00;	/*背景色（古いブラウザ用）*/
-	background: linear-gradient(#ffa600, #ff8a00);	/*背景グラデーション*/
+	background: #f7efe7;	/*背景色（古いブラウザ用）*/
+	background: linear-gradient(#fcfdfd, #fcfdfd);	/*背景グラデーション*/
 	color: #FFF;		/*文字色*/
 	padding: 3px 15px;	/*上下、左右へのボックス内の余白*/
 	border-radius: 4px;	/*角丸のサイズ*/
-	border: 1px solid #ff8a00;	/*枠線の幅、線種、色*/
+	border: 1px solid #6dc7fc;	/*枠線の幅、線種、色*/
 }
 /*マウスオン時*/
 #headermenu li a:hover {
 	color: #ff8a00;	/*文字色*/
-	background: #fff;	/*背景色*/
+	background: #6dc7fc;	/*背景色*/
 }
 
 /*文字サイズ変更ボタン（※文字サイズを「大」にした時の設定はchange.cssで行う）
@@ -815,4 +815,28 @@ header #logo {
 .ws,.wl {width: 94%;}
 
 }
+/*boxの追加(service.html、info.htmlで使用)*/
+.box7{
+    padding: 0.5em 1em;
+    margin: 2em 0;
+    color: #474747;
+    background: whitesmoke;/*背景色*/
+    border-left: double 7px #4ec4d3;/*左線*/
+    border-right: double 7px #4ec4d3;/*右線*/
+}
+.box7 p {
+    margin: 0; 
+    padding: 0;
+}
 
+.box8 {
+    padding: 0.5em 1em;
+    margin: 2em 0;
+    color: #232323;
+    background: #fff8e8;
+    border-left: solid 10px #ffc06e;
+}
+.box8 p {
+    margin: 0; 
+    padding: 0;
+}
