@@ -12,6 +12,7 @@
 <script src="js/fixmenu_pagetop.js"></script>
 <script src="js/ddmenu_min.js"></script>
 <script src="js/styleswitcher.js"></script>
+<script src="js/login.js"></script>
 <!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -71,16 +72,106 @@
 
 <section>
 
-<h2>会員登録（ログイン）ページ</h2>
+<h2>一般利用者様用登録フォーム</h2>
 
-<h3>会員登録　※初めて利用される方
-<p> <a href="syogaisya register.html" class="btn-circle-flat1">企業(人事)様</a>
-    <a href="company register.html" class="btn-circle-flat2">一般利用者様</a>
-</p>
-<h3>ログイン　※すでにアカウントをお持ちの方
-<p> <a href="" class="btn-circle-flat1">企業(人事)様</a>
-    <a href="#" class="btn-circle-flat2">一般利用者様</a>
-</p>
+<!-- フォームの情報はここからです -->
+<form name="form1" enctype="multipart/form-data" method="post" action="?php echo $_SERVER["REQUEST_URI>
+	<input type="hidden" name="mode" value="form">
+	
+	<table class="ta1">
+	<!-- 入力／確認 -->
+	<!--<tr><th class="tamidashi" colspan="2">お問い合わせフォーム</th></tr>-->
+	<tr>
+	<th width="150">企業名<span style="color:red">※</span></th>
+	<td>
+	<input name="item1" value="" type="text" size="40" maxlength="500" class="ws" required>
+	</td>
+    </tr>
+	<tr>
+	<th width="150">フリガナ<span style="color:red">※</span></th>
+	<td>
+	<input name="item1" value="" type="text" size="40" maxlength="500" class="ws" required>
+	</td>
+	</tr>
+	<tr>
+	<th width="150">メールアドレス<span style="color:red">※</span></th>
+	<td>
+	<input name="item2" value="" type="email" size="40" maxlength="500" class="ws" required>
+	</td>
+	</tr>
+	<tr>
+	<th width="150">電話番号(ハイフンなし)<span style="color:red">※</span></th>
+	<td>
+	<input name="item1" value="" type="tel" size="40" maxlength="500" class="ws" required>
+	</td>
+	</tr>
+    <tr>
+    <th width="150">担当者様　名前<span style="color:red">※</span></th>
+    <td>
+    <input name="item1" value="" type="text" size="40" maxlength="500" class="ws" required>
+    </td>
+    </tr>
+	<tr>
+	<th width="150">パスワード設定<span style="color:red">※</span></th>
+	<td>
+	<input name="item1" value="" type="text" size="40" maxlength="500" class="ws" required>
+	</td>
+	</tr>
+	<tr>
+	<th width="150">採用職種<span style="color:red">※</span></th>
+	<td>
+        <div class="review">
+			  <span>
+				<input id="review01" type="radio" name="review"><label for="review01">事務的作業</label><br>
+				<input id="review02" type="radio" name="review"><label for="review02">生産工程作業</label><br>
+				<input id="review03" type="radio" name="review"><label for="review03">PC作業</label><br>
+				<input id="review04" type="radio" name="review"><label for="review04">販売</label><br>
+				<input id="review05" type="radio" name="review"><label for="review05">サービス業</label><br>
+                <input id="review01" type="radio" name="review"><label for="review01">運搬・清掃・梱包作業</label><br>
+				<input id="review02" type="radio" name="review"><label for="review02">農林水産畜産業</label><br>
+				<input id="review03" type="radio" name="review"><label for="review03">その他</label>
+			  </span>
+		  </div>
+	</td>
+	</tr>
+	<tr>
+	<th width="150">勤務日数<span style="color:red">※</span></th>
+	<td>
+        <div class="review">
+            <span>
+              <input id="review01" type="radio" name="review"><label for="review01">週1~2</label><br>
+              <input id="review02" type="radio" name="review"><label for="review02">週3~4</label><br>
+              <input id="review03" type="radio" name="review"><label for="review03">週5~</label>
+        </div>
+	</td>
+	</tr>
+	<tr>
+        <th width="150">勤務時間<span style="color:red">※</span></th>
+        <td>
+            <div class="review">
+                <span>
+                  <input id="review01" type="radio" name="review"><label for="review01">~5時間</label><br>
+                  <input id="review02" type="radio" name="review"><label for="review02">5~8時間</label>
+            </div>
+        </td>
+        </tr>
+	<tr>
+	<th>求める人材<span style="color:red"></span></th>
+	<td>
+	<textarea name="item3" cols="40" rows="10" class="wl">ご自由にお書きください</textarea>
+	</td>
+	</tr>
+	</table>
+	
+	<div class="c">
+	<input type="submit" value="内容を確認する" a href="#" class="btn">
+	&nbsp;
+	<input type="reset" value="リセット" class="btn">
+	</div>
+	
+	</form>
+	<!-- フォームの情報はここまでです -->
+
 </section>
 
 </div>
@@ -101,8 +192,6 @@
 <li><a href="#">メニューサンプル</a></li>
 </ul>
 </nav>
-
-
 
 </div>
 <!--/#sub-->
