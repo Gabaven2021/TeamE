@@ -987,3 +987,12 @@ form {
 .form-footer a:hover {
   border-bottom: 1px dotted #8c8c8c;
 }
+
+/*画像アップロード*/
+.input-file .preview {
+	background-image: url(/hoge.jpg);
+  }
+  .input-file input[type="file"] {
+	opacity: 0;
+  }
+  
