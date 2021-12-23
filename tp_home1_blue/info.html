@@ -75,31 +75,109 @@
 <h2>企業（人事）向け詳細</h2>
 <p>企業（人事）の方々への詳細ページです。</p>
 
-<div class="list">
-<figure><img src="images/sample1.jpg" alt=""></figure>
-<h4>リンクなしの場合。</h4>
-<p>説明をここに入れます。サンプルテキスト。説明をここに入れます。サンプルテキスト。説明をここに入れます。サンプルテキスト。</p>
-</div>
 
-<div class="list">
-<a href="service2.html">
-<figure><img src="images/sample1.jpg" alt=""></figure>
-<h4>ボックスにリンクを貼る場合。</h4>
-<p>ボックスにリンクを設定してある場合、ボックスの右下に「→」マークが出ます。</p>
-</a>
-</div>
+<h3>提供サービス</h3>
+<p><img src="images/kigyou info.png" alt=""><br>
 
-<div class="list link">
-<figure><a href="service2.html"><img src="images/sample1.jpg" alt=""></a></figure>
-<h4>部分的にリンクを貼る場合。</h4>
-<p>ボックス全体でなく、画像やテキストなど<a href="#">部分的にリンクを貼りたい場合</a>は、<br>
-&lt;div class=&quot;list&quot;&gt;を、<br>
-&lt;div class=&quot;list <span class="color2">link</span>&quot;&gt;にして下さい。</p>
-</div>
+<h3 id="kigyoserchjump">障がい者　条件検索</h3>
 
-<h3>見出しをここにいれます</h3>
-<p><img src="images/sample1.jpg" alt=""><br>
-説明をここに入れます。サンプルテキスト。説明をここに入れます。サンプルテキスト。説明をここに入れます。サンプルテキスト。</p>
+	<link rel="stylesheet" type="text/css" href="css/.css">
+	<script type="text/javascript">
+	function jump1(){
+	var clist = document.getElementById('checklist').getElementsByTagName('input');
+	var URLlist = new Array();
+	URLlist['10010000010'] = 'kigyo serch/m,ho,5.html';
+	URLlist['10010000001'] = 'kigyo serch/m,ho,8.html';  
+	URLlist['10001000010'] = 'kigyo serch/m,kan,5.html';
+	URLlist['10001000001'] = 'kigyo serch/m,kan,8.html';
+	URLlist['10000101010'] = 'kigyo serch/m,tyu,5.html';
+	URLlist['10000100101'] = 'kigyo serch/m,tyu,8.html';
+	URLlist['10000010010'] = 'kigyo serch/m,kin,5.html';
+	URLlist['10000010001'] = 'kigyo serch/m,kin,8.html';
+	URLlist['10000001010'] = 'kigyo serch/m,sikoku,5.html';
+	URLlist['10000001001'] = 'kigyo serch/m,sikoku,8.html';
+	URLlist['10000000110'] = 'kigyo serch/m,kyu,5.html';
+	URLlist['10000000101'] = 'kigyo serch/m,kyu,8.html';
+	
+	URLlist['01010000010'] = 'kigyo serch/fm,ho,5.html';
+	URLlist['01010000001'] = 'kigyo serch/fm,ho,8.html';  
+	URLlist['01001000010'] = 'kigyo serch/fm,kan,5.html';
+	URLlist['01001000001'] = 'kigyo serch/fm,kan,8.html';
+	URLlist['01000100010'] = 'kigyo serch/fm,tyu,5.html';
+	URLlist['01000100001'] = 'kigyo serch/fmtyu,8.html';
+	URLlist['01000010010'] = 'kigyo serch/fm,kin,5.html';
+	URLlist['01000010001'] = 'kigyo serch/fm,kin,8.html';
+	URLlist['01000001010'] = 'kigyo serch/fm,sikoku,5.html';
+	URLlist['01000001001'] = 'kigyo serch/fm,sikoku,8.html';
+	URLlist['01000000110'] = 'kigyo serch/fm,kyu,5.html';
+	URLlist['01000000101'] = 'vfm,kyu,8.html';
+
+	URLlist['00110000010'] = 'kigyo serch/oh,ho,5.html';
+	URLlist['00110000001'] = 'kigyo serch/oh,ho,8.html';  
+	URLlist['00101000010'] = 'kigyo serch/oh,kan,5.html';
+	URLlist['00101000001'] = 'kigyo serch/oh,kan,8.html';
+	URLlist['00100100010'] = 'kigyo serch/oh,tyu,5.html';
+	URLlist['00100100001'] = 'kigyo serch/oh,tyu,8.html';
+	URLlist['00100010010'] = 'kigyo serch/oh,kin,5.html';
+	URLlist['00100010001'] = 'kigyo serch/oh,kin,8.html';
+	URLlist['00100001010'] = 'kigyo serch/oh,sikoku,5.html';
+	URLlist['00100001001'] = 'kigyo serch/oh,sikoku,8.html';
+	URLlist['00100000110'] = 'kigyo serch/oh,kyu,5.html';
+	URLlist['00100000101'] = 'kigyo serch/oh,kyu,8.html';
+	var condition='';
+	for(var i=0;i<clist.length;i++) {
+	condition += (clist[i].checked)?'1':'0';
+	}
+	if(condition == '00000000000') {
+	alert('チェックが一つもありません');
+	return;
+	}
+	//alert(URLlist[condition]);return; //テスト用
+	location.href=URLlist[condition];
+	}
+	
+	
+	function jump2(){
+	var clist = document.getElementById('checklist').getElementsByTagName('input');
+	var condition='';
+	for(var i=0;i<clist.length;i++) {
+	condition += (clist[i].checked)?i+1:'';
+	}
+	if(condition == '') {
+	alert('チェックが一つもありません');
+	return;
+	}
+	//alert(condition+'.html');return; //テスト用
+	location.href=condition+'.html';
+	}
+
+	</script>
+	</head>
+	<body>
+		<ul id="checklist">
+		<hr CLASS="hr1">
+		  <p class="p1">1.<span class="under">性別</span></p>
+		<li><input type="checkbox" id="cb01"><label for="cb01">男性</label></li>
+		<li><input type="checkbox" id="cb02"><label for="cb02">女性</label></li>
+		<li><input type="checkbox" id="cb03"><label for="cb03">その他</label></li>
+		<hr class="hr1">
+		  <p class="p1">2.<span class="under">勤務可能地域</span></p>
+		<li><input type="checkbox" id="cb04"><label for="cb04">北海道・東北</label></li>
+		<li><input type="checkbox" id="cb05"><label for="cb05">関東</label></li>
+		<li><input type="checkbox" id="cb06"><label for="cb06">中部</label></li>
+		<li><input type="checkbox" id="cb07"><label for="cb07">近畿</label></li>
+		<li><input type="checkbox" id="cb08"><label for="cb08">中国・四国</label></li>
+		<li><input type="checkbox" id="cb09"><label for="cb09">九州</label></li>
+		<hr class="hr1">
+		  <p class="p1">3.<span class="under">働ける時間（1日当たり）</span></p>
+		<li><input type="checkbox" id="cb11"><label for="cb10">~5時間</label></li>
+		<li><input type="checkbox" id="cb12"><label for="cb11">5~8時間</label></li>
+		</ul>
+		<br>
+		<a href="#" class="btn-square-shadow" input type="button" value="決定" onclick="jump1()">検索</a>
+		<hr CLASS="hr1">
+	</body>
+</p>
 
 </section>
 

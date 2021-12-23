@@ -134,3 +134,14 @@ body.is-fixed header {
   .stars input[type='radio']:checked ~ label{
 	color: #F8C601;              /* 選択された星以降をすべて黄色にする */
   }
+
+
+  .basebox  
+  { display: flex;
+	width:50%;
+	padding: 10px;
+	margin-left:5px;
+	border:solid 1px #6699ff;
+	background-color: #ffffff; 
+  }
+
