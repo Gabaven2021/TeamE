@@ -381,7 +381,7 @@ header #logo {
 	margin-bottom: 0px;
 }
 
-/*サブコンテンツ内のbox2（「サンプルホームとは？」と「スタッフ募集中」のバナー）
+/*サブコンテンツ内のbox2（「サンプルホームとは？」と「新規会員様募集中」のバナー）
 ---------------------------------------------------------------------------*/
 #sub .box2 {
 	margin-bottom: 15px;	/*ボックスの下に空けるスペース*/
@@ -403,7 +403,7 @@ header #logo {
 #sub .box2.about {
 	background: #edf5fa url(../images/logo_mark.png) no-repeat right center / 100px;	/*背景色、背景画像の読み込み。高さ100px。*/
 }
-/*「スタッフ募集中」の背景設定*/
+/*「新規会員様募集中」の背景設定*/
 #sub .box2.recruit {
 	background: #edf5fa url(../images/recruit_img.png) no-repeat right top / 110px;		/*背景色、背景画像の読み込み。高さ110px。*/
 }
@@ -840,3 +840,49 @@ header #logo {
     margin: 0; 
     padding: 0;
 }
+
+
+/*会員登録ページ　ボタン*/
+.btn-circle-flat1 {
+	display: inline-block;
+	text-decoration: none;
+	background: #87befd;
+	color: #FFF;
+	width: 120px;
+	height: 120px;
+	line-height: 120px;
+	border-radius: 50%;
+	text-align: center;
+	overflow: hidden;
+	transition: .4s;
+	position: relative;
+	left: 90px;
+  }
+  
+  .btn-circle-flat1:hover {
+	background: #bed1fa;
+	position: relative;
+	left: 90px;
+  }
+
+  .btn-circle-flat2 {
+	display: inline-block;
+	text-decoration: none;
+	background: #87befd;
+	color: #FFF;
+	width: 120px;
+	height: 120px;
+	line-height: 120px;
+	border-radius: 50%;
+	text-align: center;
+	overflow: hidden;
+	transition: .4s;
+	position: relative;
+	left: 240px;
+  }
+  
+  .btn-circle-flat2:hover {
+	background: #bed1fa;
+	position: relative;
+	left: 240px;
+  }
