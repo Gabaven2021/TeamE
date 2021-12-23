@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>老人ホーム・介護施設・デイサービス向け 無料ホームページテンプレート tp_home1</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="ここにサイト説明を入れます">
+<meta name="keywords" content="キーワード１,キーワード２,キーワード３,キーワード４,キーワード５">
+<link rel="stylesheet" href="css/style.css">
+<link rel="alternate stylesheet" href="css/change.css" title="change">
+<script src="js/openclose.js"></script>
+<script src="js/fixmenu_pagetop.js"></script>
+<script src="js/ddmenu_min.js"></script>
+<script src="js/styleswitcher.js"></script>
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+</head>
+
+<body>
+
+<div id="container">
+
+<header>
+<div class="inner">
+<h1 id="logo"><a href="index.html"><img src="images/logo.png" alt="サンプルホーム"></a></h1>
+<ul id="headermenu">
+<li><a href="contact.html"><IMG SRC="images/header1-1.jpg" border=0 width="40" height="40" alt=""></a></li>
+<li><a href="kaiintouroku gamen.html"><IMG SRC="images/header1-2.png" border=0 width="40" height="40" alt=""></a></li>
+</ul>
+<!--文字サイズ変更ボタン-->
+<div id="fsize">
+<p>文字サイズ</p>
+<ul>
+<li id="small"><a href="#" onclick="setActiveStyleSheet('default'); return false;" title="文字サイズ「小」"></a></li>
+<li id="large"><a href="#" onclick="setActiveStyleSheet('change'); return false;" title="文字サイズ「大」"></a></li>
+</ul>
+</div>
+</div>
+<!--/.inner-->
+</header>
+
+<!--PC用（901px以上端末）メニュー-->
+<nav id="menubar">
+<ul class="inner">
+<li><a href="index.html">ホーム</a></li>
+<li class="current"><a href="info.html">企業（人事）向け詳細</a></li>
+<li><a href="service.html">障がい者（一般利用者）向け詳細</a></li>
+<li><a href="price.html">ご利用料金</a></li>
+<li><a href="access.html">アクセス</a></li>
+<li><a href="faq.html">よく頂く質問</a></li>
+</ul>
+</nav>
+
+<!--小さな端末用（900px以下端末）メニュー-->
+<nav id="menubar-s">
+<ul>
+<li><a href="index.html">ホーム</a></li>
+<li class="current"><a href="info.html">企業（人事）向け詳細</a></li>
+<li><a href="service.html">障がい者（一般利用者）向け詳細</a></li>
+<li><a href="price.html">ご利用料金</a></li>
+<li><a href="access.html">アクセス</a></li>
+<li><a href="faq.html">よく頂く質問</a></li>
+</ul>
+</nav>
+
+<div id="contents" class="inner">
+
+<div id="main">
+
+<section>
+
+<h2>企業（人事）向け詳細</h2>
+<p>企業（人事）の方々への詳細ページです。</p>
+
+
+<h3>提供サービス</h3>
+<p><img src="images/kigyou info.png" alt=""><br>
+
+<h3 id="kigyoserchjump">障がい者　条件検索</h3>
+
+	<link rel="stylesheet" type="text/css" href="css/.css">
+	<script type="text/javascript">
+	function jump1(){
+	var clist = document.getElementById('checklist').getElementsByTagName('input');
+	var URLlist = new Array();
+	URLlist['10010000010'] = 'kigyo serch/男性/m,ho,5.html';
+	URLlist['10010000001'] = 'kigyo serch/男性/m,ho,8.html';  
+	URLlist['10001000010'] = 'kigyo serch/男性/m,kan,5.html';
+	URLlist['10001000001'] = 'kigyo serch/男性/m,kan,8.html';
+	URLlist['10000100010'] = 'kigyo serch/男性/m,tyu,5.html';
+	URLlist['10000100001'] = 'kigyo serch/男性/m,tyu,8.html';
+	URLlist['10000010010'] = 'kigyo serch/男性/m,kin,5.html';
+	URLlist['10000010001'] = 'kigyo serch/男性/m,kin,8.html';
+	URLlist['10000001010'] = 'kigyo serch/男性/m,sikoku,5.html';
+	URLlist['10000001001'] = 'kigyo serch/男性/m,sikoku,8.html';
+	URLlist['10000000110'] = 'kigyo serch/男性/m,kyu,5.html';
+	URLlist['10000000101'] = 'kigyo serch/男性/m,kyu,8.html';
+	
+	URLlist['01010000010'] = 'kigyo serch/女性/fm,ho,5.html';
+	URLlist['01010000001'] = 'kigyo serch/女性/fm,ho,8.html';  
+	URLlist['01001000010'] = 'kigyo serch/女性/fm,kan,5.html';
+	URLlist['01001000001'] = 'kigyo serch/女性/fm,kan,8.html';
+	URLlist['01000100010'] = 'kigyo serch/女性/fm,tyu,5.html';
+	URLlist['01000100001'] = 'kigyo serch/女性/fmtyu,8.html';
+	URLlist['01000010010'] = 'kigyo serch/女性/fm,kin,5.html';
+	URLlist['01000010001'] = 'kigyo serch/女性/fm,kin,8.html';
+	URLlist['01000001010'] = 'kigyo serch/女性/fm,sikoku,5.html';
+	URLlist['01000001001'] = 'kigyo serch/女性/fm,sikoku,8.html';
+	URLlist['01000000110'] = 'kigyo serch/女性/fm,kyu,5.html';
+	URLlist['01000000101'] = 'kigyo serch/女性/fm,kyu,8.html';
+
+	URLlist['00110000010'] = 'kigyo serch/その他/oh,ho,5.html';
+	URLlist['00110000001'] = 'kigyo serch/その他/oh,ho,8.html';  
+	URLlist['00101000010'] = 'kigyo serch/その他/oh,kan,5.html';
+	URLlist['00101000001'] = 'kigyo serch/その他/oh,kan,8.html';
+	URLlist['00100100010'] = 'kigyo serch/その他/oh,tyu,5.html';
+	URLlist['00100100001'] = 'kigyo serch/その他/oh,tyu,8.html';
+	URLlist['00100010010'] = 'kigyo serch/その他/oh,kin,5.html';
+	URLlist['00100010001'] = 'kigyo serch/その他/oh,kin,8.html';
+	URLlist['00100001010'] = 'kigyo serch/その他/oh,sikoku,5.html';
+	URLlist['00100001001'] = 'kigyo serch/その他/oh,sikoku,8.html';
+	URLlist['00100000110'] = 'kigyo serch/その他/oh,kyu,5.html';
+	URLlist['00100000101'] = 'kigyo serch/その他/oh,kyu,8.html';
+	var condition='';
+	for(var i=0;i<clist.length;i++) {
+	condition += (clist[i].checked)?'1':'0';
+	}
+	if(condition == '00000000000') {
+	alert('チェックが一つもありません');
+	return;
+	}
+	//alert(URLlist[condition]);return; //テスト用
+	location.href=URLlist[condition];
+	}
+	
+	
+	function jump2(){
+	var clist = document.getElementById('checklist').getElementsByTagName('input');
+	var condition='';
+	for(var i=0;i<clist.length;i++) {
+	condition += (clist[i].checked)?i+1:'';
+	}
+	if(condition == '') {
+	alert('チェックが一つもありません');
+	return;
+	}
+	//alert(condition+'.html');return; //テスト用
+	location.href=condition+'.html';
+	}
+
+	</script>
+	</head>
+	<body>
+		<ul id="checklist">
+		<hr CLASS="hr1">
+		  <p class="p1">1.<span class="under">性別</span></p>
+		<li><input type="checkbox" id="cb01"><label for="cb01">男性</label></li>
+		<li><input type="checkbox" id="cb02"><label for="cb02">女性</label></li>
+		<li><input type="checkbox" id="cb03"><label for="cb03">その他</label></li>
+		<hr class="hr1">
+		  <p class="p1">2.<span class="under">勤務可能地域</span></p>
+		<li><input type="checkbox" id="cb04"><label for="cb04">北海道・東北</label></li>
+		<li><input type="checkbox" id="cb05"><label for="cb05">関東</label></li>
+		<li><input type="checkbox" id="cb06"><label for="cb06">中部</label></li>
+		<li><input type="checkbox" id="cb07"><label for="cb07">近畿</label></li>
+		<li><input type="checkbox" id="cb08"><label for="cb08">中国・四国</label></li>
+		<li><input type="checkbox" id="cb09"><label for="cb09">九州</label></li>
+		<hr class="hr1">
+		  <p class="p1">3.<span class="under">働ける時間（1日当たり）</span></p>
+		<li><input type="checkbox" id="cb11"><label for="cb10">~5時間</label></li>
+		<li><input type="checkbox" id="cb12"><label for="cb11">5~8時間</label></li>
+		</ul>
+		<br>
+		<a href="#" class="btn-square-shadow" input type="button" value="決定" onclick="jump1()">検索</a>
+		<hr CLASS="hr1">
+	</body>
+</p>
+
+</section>
+
+</div>
+<!--/#main-->
+
+<div id="sub">
+
+<p class="box2 about"><a href="info.html">サンプルホームとは？</a></p>
+<p class="box2 recruit"><a href="kaiintouroku gamen.html">新規会員様募集中</a></p>
+
+<nav class="box1">
+<h2>メニュー</h2>
+<ul class="submenu">
+<li><a href="company.html">会社概要</a></li>
+<li><a href="#">メニューサンプル</a></li>
+<li><a href="#">メニューサンプル</a></li>
+<li><a href="#">メニューサンプル</a></li>
+<li><a href="#">メニューサンプル</a></li>
+</ul>
+</nav>
+
+</div>
+<!--/#sub-->
+
+</div>
+<!--/#contents-->
+
+</div>
+<!--/#container-->
+
+<footer>
+
+<div id="footermenu" class="inner">
+<ul>
+<li><a href="index.html">ホーム</a></li>
+<li><a href="info.html">企業（人事）向け詳細</a></li>
+<li><a href="service.html">障がい者（一般利用者）向け詳細</a></li>
+<li><a href="price.html">ご利用料金</a></li>
+<li><a href="access.html">アクセス</a></li>
+<li><a href="faq.html">よく頂く質問</a></li>
+</ul>
+<ul>
+<li><a href="contact.html">お問い合わせ</a></li>
+<li><a href="feedback form.html">フィードバックフォーム</a></li>
+<li><a href="company.html">会社概要</a></li>
+<li><a href="kaiintouroku gamen.html">新規会員様募集中</a></li>
+</ul>
+
+</div>
+<!--/footermenu-->
+
+<div id="copyright">
+<small>Copyright&copy; <a href="index.html">サンプルホーム</a> All Rights Reserved.</small>
+<span class="pr"><a href="https://template-party.com/" target="_blank">Web Design:Template-Party</a></span>
+</div>
+
+</footer>
+
+<!--ページの上部に戻る「↑」ボタン-->
+<p class="nav-fix-pos-pagetop"><a href="#">↑</a></p>
+
+<!--メニュー開閉ボタン-->
+<div id="menubar_hdr" class="close"></div>
+<!--メニューの開閉処理条件設定　900px以下-->
+<script>
+if (OCwindowWidth() <= 900) {
+	open_close("menubar_hdr", "menubar-s");
+}
+</script>
+
+</body>
+</html>
