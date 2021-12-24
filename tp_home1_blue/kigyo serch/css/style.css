@@ -405,7 +405,7 @@ header #logo {
 }
 /*「スタッフ募集中」の背景設定*/
 #sub .box2.recruit {
-	background: #edf5fa url(../images/recruit_img.png) no-repeat right top / 110px;		/*背景色、背景画像の読み込み。高さ110px。*/
+	background: #edf5fa url(../images/katti.png) no-repeat right top / 165px;		/*背景色、背景画像の読み込み。高さ110px。*/
 }
 
 /*フッター設定
