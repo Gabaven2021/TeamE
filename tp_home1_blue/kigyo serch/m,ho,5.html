@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
@@ -26,8 +27,8 @@
 <div class="inner">
 <h1 id="logo"><a href="index.html"><img src="images/logo.png" alt="サンプルホーム"></a></h1>
 <ul id="headermenu">
-<li><a href="contact.html"><IMG SRC="images/header1-1.jpg" border=0 width="40" height="40" alt=""></a></li>
-<li><a href="kaiintouroku gamen.html"><IMG SRC="images/header1-2.png" border=0 width="40" height="40" alt=""></a></li>
+<li><a href="contact.html">お問い合わせ</a></li>
+<li><a href="feedback form.html">フィードバックフォーム</a></li>
 </ul>
 <!--文字サイズ変更ボタン-->
 <div id="fsize">
@@ -45,7 +46,7 @@
 <nav id="menubar">
 <ul class="inner">
 <li><a href="index.html">ホーム</a></li>
-<li><a href="info.html">企業（人事）向け詳細</a></li>
+<li class="current"><a href="info.html">企業（人事）向け詳細</a></li>
 <li><a href="service.html">障がい者（一般利用者）向け詳細</a></li>
 <li><a href="price.html">ご利用料金</a></li>
 <li><a href="access.html">アクセス</a></li>
@@ -57,7 +58,7 @@
 <nav id="menubar-s">
 <ul>
 <li><a href="index.html">ホーム</a></li>
-<li><a href="info.html">企業（人事）向け詳細</a></li>
+<li class="current"><a href="info.html">企業（人事）向け詳細</a></li>
 <li><a href="service.html">障がい者（一般利用者）向け詳細</a></li>
 <li><a href="price.html">ご利用料金</a></li>
 <li><a href="access.html">アクセス</a></li>
@@ -71,86 +72,17 @@
 
 <section>
 
-<h2>フィードバックフォーム</h2>
+<h2>企業（人事）向け詳細</h2>
+<p>企業（人事）の方々への詳細ページです。</p>
 
-<!-- フォームの情報はここからです -->
-<form name="form1" enctype="multipart/form-data" method="post" action="?php echo $_SERVER["REQUEST_URI>
-	<input type="hidden" name="mode" value="form">
-	<table class="ta1">
-	<!-- 入力／確認 -->
-	<!--<tr><th class="tamidashi" colspan="2">お問い合わせフォーム</th></tr>-->
-	<tr>
-	<th width="150">お名前<span style="color:red">※</span></th>
-	<td>
-	<input name="item1" value="" type="text" size="40" maxlength="500" class="ws" required>
-	</td>
-	</tr>
-	<tr>
-	<th width="150">フリガナ<span style="color:red">※</span></th>
-	<td>
-	<input name="item2" value="" type="text" size="40" maxlength="500" class="ws" required>
-	</td>
-	</tr>
-	<tr>
-	<th width="150">勤務先<span style="color:red">※</span></th>
-	<td>
-	<input name="item3" value="" type="text" size="40" maxlength="500" class="ws" required>
-	</td>
-	</tr>
-	<tr>
-    <th width="150">障がい種<span style="color:red">※</span></th>
-    <td>
-    <input name="item4" value="" type="text" size="40" maxlength="500" class="ws" required>
-    </td>
-    </tr>
-    <tr>
-    <th width="150">働いた時間<span style="color:red">※</span></th>
-    <td>
-    <input name="item5"  type="text" size="10" width="10px" maxlength="2"  required> &nbsp;～
-    <input name="item6"  type="text" size="10" width="10px" maxlength="2"  required>&nbsp;時
-    </td>
-    </tr>
-    <tr>
-    <th width="150">満足度<span style="color:red">※</span></th>
-    <td>
-        <div class="review">
-			<div class="stars">
-			  <span>
-				<input id="review01" type="radio" name="review"><label for="review01">非常に低い</label>
-				<input id="review02" type="radio" name="review"><label for="review02">低い</label>
-				<input id="review03" type="radio" name="review"><label for="review03">普通</label>
-				<input id="review04" type="radio" name="review"><label for="review04">高い</label>
-				<input id="review05" type="radio" name="review"><label for="review05">非常に高い</label>
-			  </span>
-			</div>
-		  </div>
-    </td>
-    </tr>
-	<tr>
-	<th>要望<span style="color:red">※</span></th>
-	<td>
-	<textarea name="item7" cols="40" rows="10" class="wl">できるだけ詳しくお願いします</textarea>
-	</td>
-	</tr>
-	<tr>
-	<th>掲載（企業詳細ページ）可<span style="color:red">※</span></th>
-	<td>
-	<input type="checkbox" name="con" value="can" checked>可
-	</td>
-	</tr>
-	</table>
-	
-	<div class="c">
-	  <input type="submit" value="送信する"  class="btn">
-	  &nbsp;
-	  <input type="reset" value="リセット" class="btn">
-	</form>
+
+<h3>検索【男性】／【北海道・東北】／【~5時間】 &nbsp; &nbsp; &nbsp; <a href="../info.html #kigyoserchjump">≪検索条件選択欄に戻る≫</a></h3>
+    <div class="basebox">
+	<p><img src="images/m,ho,5 ①.png" alt=""　 width="85%" height="90px">&nbsp;&nbsp;  <a href="people/m,ho,5,①.html">【詳細】</a></p>
+	<p><img src="images/m,ho,5 ②.png" alt=""　 width="85%" height="90px">&nbsp;&nbsp;  <a href="people/m,ho,5,②.html">【詳細】</a></p>
+	<p><img src="images/m,ho,5 ③.png" alt=""　 width="85%" height="90px">&nbsp;&nbsp;  <a href="people/m,ho,5,③.html">【詳細】</a></p>
 	</div>
-	
-	</form>
-	<!-- フォームの情報はここまでです -->
-
-</section>
+ </section>
 
 </div>
 <!--/#main-->
@@ -158,7 +90,7 @@
 <div id="sub">
 
 <p class="box2 about"><a href="info.html">サンプルホームとは？</a></p>
-<p class="box2 recruit"><a href="kaiintouroku gamen.html">新規会員様募集中</a></p>
+<p class="box2 recruit"><a href="recruit.html">スタッフ募集中</a></p>
 
 <nav class="box1">
 <h2>メニュー</h2>
@@ -171,7 +103,15 @@
 </ul>
 </nav>
 
-
+<nav>
+<ul class="submenu">
+<li><a href="company.html">会社概要</a></li>
+<li><a href="#">メニューサンプル</a></li>
+<li><a href="#">メニューサンプル</a></li>
+<li><a href="#">メニューサンプル</a></li>
+<li><a href="#">メニューサンプル</a></li>
+</ul>
+</nav>
 
 </div>
 <!--/#sub-->
@@ -197,7 +137,7 @@
 <li><a href="contact.html">お問い合わせ</a></li>
 <li><a href="feedback form.html">フィードバックフォーム</a></li>
 <li><a href="company.html">会社概要</a></li>
-<li><a href="kaiintouroku gamen.html">新規会員様募集中</a></li>
+<li><a href="recruit.html">介護スタッフ募集中</a></li>
 </ul>
 
 </div>
@@ -224,4 +164,3 @@ if (OCwindowWidth() <= 900) {
 
 </body>
 </html>
-<!DOCTYPE html>
