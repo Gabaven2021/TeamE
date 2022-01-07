@@ -995,4 +995,14 @@ form {
   .input-file input[type="file"] {
 	opacity: 0;
   }
+/*写真サイズ*/
+img.mb30 {
+	width: 600px;
+	height: 400px;
+	}
+/*ロゴの大きさ*/
+.logo{
+		width: 300px;
+		height: auto;
+	}
   
