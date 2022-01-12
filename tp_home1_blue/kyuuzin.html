@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>老人ホーム・介護施設・デイサービス向け 無料ホームページテンプレート tp_home1</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="ここにサイト説明を入れます">
+<meta name="keywords" content="キーワード１,キーワード２,キーワード３,キーワード４,キーワード５">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/serch.css">
+<link rel="alternate stylesheet" href="css/change.css" title="change">
+<script src="js/openclose.js"></script>
+<script src="js/fixmenu_pagetop.js"></script>
+<script src="js/ddmenu_min.js"></script>
+<script src="js/styleswitcher.js"></script>
+<script src="js/serch.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+<script>
+
+    function hyoji1(num)
+    {
+      if (num == 0)
+      {
+        document.getElementById("disp").style.display="block";
+      }
+      else
+      {
+        document.getElementById("disp").style.display="none";
+      }
+    }
+    function isCheck() {
+    var arr_checkBoxes = document.getElementsByClassName("check");
+    var count = 0;
+    for (var i = 0; i < arr_checkBoxes.length; i++) {
+        if (arr_checkBoxes[i].checked) {
+            count++;
+        }
+    }
+    if (count > 0) {
+        return true;
+    } else {
+        window.alert("1つ以上選択してください。");
+        return false;
+    };
+ 
+}
+$(function() {
+    // 1. 「全選択」する
+    $('#all').on('click', function() {
+      $("input[name='cat[sta][]']").prop('checked', this.checked);
+    });
+    // 2. 「全選択」以外のチェックボックスがクリックされたら、
+    $("input[name='cat[sta][]']").on('click', function() {
+      if ($('#boxes :checked').length == $('#boxes :input').length) {
+        // 全てのチェックボックスにチェックが入っていたら、「全選択」 = checked
+        $('#all').prop('checked', true);
+      } else {
+        // 1つでもチェックが入っていたら、「全選択」 = checked
+        $('#all').prop('checked', false);
+      }
+    });
+  });
+</script>
+<style>
+    .disp{
+    display:none;
+    }
+</style>
+</head>
+
+<body>
+
+<div id="container">
+
+<header>
+<div class="inner">
+<h1 id="logo"><a href="index.html"><img src="images/logo.png" alt="サンプルホーム"></a></h1>
+<ul id="headermenu">
+<li><a href="contact.html"><IMG SRC="images/header1-1.jpg" border=0 width="40" height="40" alt=""></a></li>
+<li><a href="kaiintouroku gamen.html"><IMG SRC="images/header1-2.png" border=0 width="40" height="40" alt=""></a></li>
+</ul>
+<!--文字サイズ変更ボタン-->
+<div id="fsize">
+<p>文字サイズ</p>
+<ul>
+<li id="small"><a href="#" onclick="setActiveStyleSheet('default'); return false;" title="文字サイズ「小」"></a></li>
+<li id="large"><a href="#" onclick="setActiveStyleSheet('change'); return false;" title="文字サイズ「大」"></a></li>
+</ul>
+</div>
+</div>
+<!--/.inner-->
+</header>
+
+<!--PC用（901px以上端末）メニュー-->
+<nav id="menubar">
+<ul class="inner">
+<li><a href="index.html">ホーム</a></li>
+<li><a href="info.html">企業（人事）向け詳細</a></li>
+<li><a href="riyousyamuke.html">障がい者（一般利用者）向け詳細</a></li>
+<li><a href="price.html">ご利用料金</a></li>
+<li><a href="access.html">アクセス</a></li>
+<li><a href="faq.html">よく頂く質問</a></li>
+</ul>
+</nav>
+
+<!--小さな端末用（900px以下端末）メニュー-->
+<nav id="menubar-s">
+<ul>
+<li><a href="index.html">ホーム</a></li>
+<li><a href="info.html">企業（人事）向け詳細</a></li>
+<li><a href="riyousyamuke.html">障がい者（一般利用者）向け詳細</a></li>
+<li><a href="price.html">ご利用料金</a></li>
+<li><a href="access.html">アクセス</a></li>
+<li><a href="faq.html">よく頂く質問</a></li>
+</ul>
+</nav>
+
+<div id="contents" class="inner">
+
+<div id="main">
+
+<article>
+
+<h2>求人検索ページ</h2>
+
+<h2>条件検索</h2>
+
+<form>
+    <h3>雇用形態</h3>
+    <ul method="post" action="#">
+        <label for="all"><input type="checkbox" name="allChecked" id="all">全選択</label>
+        <div id="boxes">
+            <li><label><input type="checkbox" class="check" name="cat[sta][]" value="sta1">パート・アルバイト</label></li>
+            <li><label><input type="checkbox" class="check" name="cat[sta][]" value="sta2">正社員</label></li>
+            <li><label><input type="checkbox" class="check" name="cat[sta][]" value="sta3">その他</label></li>
+        
+    </ul>
+    <hr>
+    <h3>勤務日数</h3>
+    <ul>
+        <label><input id="checkAll" type="checkbox" class="check" name="cat[day][]" value="">すべて</label>
+    <li><label><input type="checkbox" class="check" name="cat[day][]" value="day1">週１～３日</label></li>
+    <li><label><input type="checkbox" class="check" name="cat[day][]" value="day2">週4日以上</label></li>
+    </ul>
+    <hr>
+    <h3>勤務時間</h3>
+    <ul>
+        <label><input id="checkAll" type="checkbox" class="check" name="cat[time][]" value="">すべて</label>
+    <li><label><input type="checkbox" class="check" name="cat[time][]" value="time1">～５時間</label></li>
+    <li><label><input type="checkbox" class="check" name="cat[time][]" value="time2">５～８時間</label></li>
+    </ul>
+    <hr>
+    <h3>業務内容</h3>
+    <ul>
+        <label><input id="checkAll" type="checkbox" class="check" name="cat[co][]" value="">すべて</label>
+    <li><label><input type="checkbox" class="check" name="cat[co][]" value="co1">事務</label></li>
+    <li><label><input type="checkbox" class="check" name="cat[co][]" value="co2">技術職</label></li>
+    <li><label><input type="checkbox" class="check" name="cat[co][]" value="co3">営業</label></li>
+    <li><label><input type="checkbox" class="check" name="cat[co][]" value="co4">サービス業</label></li>
+    <li><label><input type="checkbox" class="check" name="cat[co][]" value="co5">軽作業</label></li>
+    <li><label><input type="checkbox" class="check" name="cat[co][]" value="co6">農業・林業</label></li>
+    <li><label><input type="checkbox" class="check" name="cat[co][]" value="co7">その他</label></li>
+    </ul>
+    <h3>勤務地</h3>
+    <ul>
+        <label><input id="checkAll" type="checkbox" class="check" name="cat[pla][]" value="">すべて</label>
+    <li><label><input type="checkbox" class="check" name="cat[pla][]" value="pla1">北海道・東北</label></li>
+    <li><label><input type="checkbox" class="check" name="cat[pla][]" value="pla2">関東</label></li>
+    <li><label><input type="checkbox" class="check" name="cat[pla][]" value="pla3">中部</label></li>
+    <li><label><input type="checkbox" class="check" name="cat[pla][]" value="pla4">近畿</label></li>
+    <li><label><input type="checkbox" class="check" name="cat[pla][]" value="pla5">中国・四国</label></li>
+    <li><label><input type="checkbox" class="check" name="cat[pla][]" value="pla6">九州</label></li>
+    </ul>
+    <button id="filterBtn" type="button" onclick="return isCheck() && hyoji1(0)">上記の条件で検索する</button>
+    <button type="reset" onclick="hyoji1(1)">リセット</button>
+</form>
+<div class="disp" id="disp">
+	<ul class="filter-items">
+		<li data-filter-key="sta1 day1 time1 co1 pla1 ">
+            <p> <iframe src="kyuuzin serch/data-01.html" frameborder="0" width = "50%" height = "350"></iframe></p>
+    	</li>
+		<li data-filter-key="sta1 day1 time1 co1 pla2 ">
+			<p> <iframe src="kyuuzin serch/data-02.html" frameborder="0" width = "50%" height = "350"></iframe></p>
+		</li>
+        <li data-filter-key="sta1 day1 time1 co1 pla3 ">
+            <p> <iframe src="kyuuzin serch/data-03.html" frameborder="0" width = "50%" height = "350"></iframe></p>
+        </li>
+        <li data-filter-key="sta1 day1 time1 co1 pla4 ">
+            <p> <iframe src="kyuuzin serch/data-04.html" frameborder="0" width = "50%" height = "350"></iframe></p>
+        </li>
+        <li data-filter-key="sta1 day1 time1 co1 pla5 ">
+            <p> <iframe src="kyuuzin serch/data-05.html" frameborder="0" width = "50%" height = "350"></iframe></p>
+        </li>
+        <li data-filter-key="sta1 day1 time1 co1 pla6 ">
+            <p> <iframe src="kyuuzin serch/data-06.html" frameborder="0" width = "50%" height = "350"></iframe></p>
+        </li>
+        <li data-filter-key="sta2 day1 time1 co1 pla1 ">
+            <p> <iframe src="kyuuzin serch/data-07.html" frameborder="0" width = "50%" height = "350"></iframe></p>
+    	</li>
+        <li data-filter-key="sta2 day1 time1 co1 pla2 ">
+			<p> <iframe src="kyuuzin serch/data-08.html" frameborder="0" width = "50%" height = "350"></iframe></p>
+		</li>
+        <li data-filter-key="sta2 day1 time1 co1 pla3 ">
+            <p> <iframe src="kyuuzin serch/data-09.html" frameborder="0" width = "50%" height = "350"></iframe></p>
+        </li>
+        <li data-filter-key="sta2 day1 time1 co1 pla4 ">
+            <p> <iframe src="kyuuzin serch/data-10.html" frameborder="0" width = "50%" height = "350"></iframe></p>
+        </li>
+        <li data-filter-key="sta2 day1 time1 co1 pla5 ">
+            <p> <iframe src="kyuuzin serch/data-11.html" frameborder="0" width = "50%" height = "350"></iframe></p>
+        </li>
+        <li data-filter-key="sta2 day1 time1 co1 pla6 ">
+            <p> <iframe src="kyuuzin serch/data-12.html" frameborder="0" width = "50%" height = "350"></iframe></p>
+        </li>
+        <li data-filter-key="sta3 day1 time1 co1 pla1 ">
+            <p> <iframe src="kyuuzin serch/data-13.html" frameborder="0" width = "50%" height = "350"></iframe></p>
+    	</li>
+		<li data-filter-key="sta3 day1 time1 co1 pla2 ">
+			<p> <iframe src="kyuuzin serch/data-14.html" frameborder="0" width = "50%" height = "350"></iframe></p>
+		</li>
+        <li data-filter-key="sta3 day1 time1 co1 pla3 ">
+            <p> <iframe src="kyuuzin serch/data-15.html" frameborder="0" width = "50%" height = "350"></iframe></p>
+        </li>
+        <li data-filter-key="sta3 day1 time1 co1 pla4 ">
+            <p> <iframe src="kyuuzin serch/data-16.html" frameborder="0" width = "50%" height = "350"></iframe></p>
+        </li>
+        <li data-filter-key="sta3 day1 time1 co1 pla5 ">
+            <p> <iframe src="kyuuzin serch/data-17.html" frameborder="0" width = "50%" height = "350"></iframe></p>
+        </li>
+        <li data-filter-key="sta3 day1 time1 co1 pla6 ">
+            <p> <iframe src="kyuuzin serch/data-18.html" frameborder="0" width = "50%" height = "350"></iframe></p>
+        </li>
+</div>
+</article>
+
+<p><a href="javascript:history.back()">&lt;&lt; 前のページに戻る</a></p>
+
+</div>
+<!--/#main-->
+
+<div id="sub">
+
+<p class="box2 about"><a href="info.html">障がい者向け求人サイト：teamEとは？</a></p>
+<p class="box2 recruit"><a href="kaiintouroku gamen.html">新規会員様募集中</a></p>
+
+<nav class="box1">
+<h2>メニュー</h2>
+<ul class="submenu">
+<li><a href="company.html">会社概要</a></li>
+<li><a href="contact.html">お問い合わせ</a></li>
+<li><a href="feedback form.html">フィードバックフォーム</a></li>
+<li><a href="kaiintouroku gamen.html">会員登録（ログイン）画面</a></li>
+<li><a href="kaiintouroku gamen.html">ログイン画面</a></li>
+</ul>
+</nav>
+
+
+</div>
+<!--/#sub-->
+
+</div>
+<!--/#contents-->
+
+</div>
+<!--/#container-->
+
+<footer>
+
+<div id="footermenu" class="inner">
+<ul>
+<li><a href="index.html">ホーム</a></li>
+<li><a href="info.html">企業（人事）向け詳細</a></li>
+<li><a href="riyousyamuke.html">障がい者（一般利用者）向け詳細</a></li>
+<li><a href="price.html">ご利用料金</a></li>
+<li><a href="access.html">アクセス</a></li>
+<li><a href="faq.html">よく頂く質問</a></li>
+</ul>
+<ul>
+<li><a href="contact.html">お問い合わせ</a></li>
+<li><a href="feedback form.html">フィードバックフォーム</a></li>
+<li><a href="company.html">会社概要</a></li>
+<li><a href="kaiintouroku gamen.html">新規会員様募集中</a></li>
+</ul>
+
+</div>
+<!--/footermenu-->
+
+<div id="copyright">
+<small>Copyright&copy; <a href="index.html">サンプルホーム</a> All Rights Reserved.</small>
+<span class="pr"><a href="https://template-party.com/" target="_blank">Web Design:Template-Party</a></span>
+</div>
+
+</footer>
+
+<!--ページの上部に戻る「↑」ボタン-->
+<p class="nav-fix-pos-pagetop"><a href="#">↑</a></p>
+
+<!--メニュー開閉ボタン-->
+<div id="menubar_hdr" class="close"></div>
+<!--メニューの開閉処理条件設定　900px以下-->
+<script>
+if (OCwindowWidth() <= 900) {
+	open_close("menubar_hdr", "menubar-s");
+}
+</script>
+
+</body>
+</html>
