@@ -995,6 +995,7 @@ form {
   .input-file input[type="file"] {
 	opacity: 0;
   }
+<<<<<<< HEAD
 /*写真サイズ*/
 img.mb30 {
 	width: 600px;
@@ -1006,3 +1007,22 @@ img.mb30 {
 		height: auto;
 	}
   
+=======
+
+  /*sns
+---------------------------------------------------------------------------*/
+#sns {
+	background: #FAF7F0;
+	padding: 4% 0;
+}
+#sns .wrapper{
+	display: flex;
+	justify-content: space-between;
+}
+#sns .sub-title{
+	margin-bottom: 150px;
+}
+.sns-box{
+	width: 300px;
+}
+>>>>>>> 4a95beea66b960919c930fee0cb390e67473325f
