@@ -995,4 +995,33 @@ form {
   .input-file input[type="file"] {
 	opacity: 0;
   }
+
+/*写真サイズ*/
+img.mb30 {
+	width: 600px;
+	height: 400px;
+	}
+/*ロゴの大きさ*/
+.logo{
+		width: 300px;
+		height: auto;
+	}
   
+
+  /*sns
+---------------------------------------------------------------------------*/
+#sns {
+	background: #FAF7F0;
+	padding: 4% 0;
+}
+#sns .wrapper{
+	display: flex;
+	justify-content: space-between;
+}
+#sns .sub-title{
+	margin-bottom: 150px;
+}
+.sns-box{
+	width: 300px;
+}
+
