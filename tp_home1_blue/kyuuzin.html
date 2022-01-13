@@ -204,17 +204,17 @@ $('#all5').on('click', function() {
         </ul>
     <h3>勤務地</h3>
         <ul>
-            <li><label for="all5"><input type="checkbox" name="allChecked" id="all5">全選択</label></li>
             <div id="boxes5">
-            <li><label><input type="checkbox" name="cat[pla][]" value="pla1">北海道・東北</label></li>
-            <li><label><input type="checkbox" name="cat[pla][]" value="pla2">関東</label></li>
-            <li><label><input type="checkbox" name="cat[pla][]" value="pla3">中部</label></li>
-            <li><label><input type="checkbox" name="cat[pla][]" value="pla4">近畿</label></li>
-            <li><label><input type="checkbox" name="cat[pla][]" value="pla5">中国・四国</label></li>
-            <li><label><input type="checkbox" name="cat[pla][]" value="pla6">九州</label></li>
+            <li><label for="all5"><input type="checkbox" name="allChecked" name="cat[pla][]" id="all5">佐賀県全域</label></li>
+            
+            <li><label><input type="checkbox" name="cat[pla][]" value="pla1">佐賀（佐賀市・小城市・多久市）</label></li>
+            <li><label><input type="checkbox" name="cat[pla][]" value="pla2">唐津（唐津市・玄海町）</label></li>
+            <li><label><input type="checkbox" name="cat[pla][]" value="pla3">伊万里（伊万里市・有田町）</label></li>
+            <li><label><input type="checkbox" name="cat[pla][]" value="pla4">東部（神埼市・吉野ヶ里町・上峰町・みやき町・鳥栖市・基山町)</label></li>
+            <li><label><input type="checkbox" name="cat[pla][]" value="pla5">杵藤（武雄市・嬉野市・鹿島市・大町町・江北町・白石町・太良町)</label></li>
             </div>
         </ul>
-    <button id="filterBtn" type="button" onclick="return isCheck() && hyoji1(0)">上記の条件で検索する</button>
+    <button id="filterBtn" type="button" onclick="hyoji1(0)">上記の条件で検索する</button>
     <button type="reset" onclick="hyoji1(1)">リセット</button>
 </form>
 <div class="disp" id="disp">
@@ -234,44 +234,301 @@ $('#all5').on('click', function() {
         <li data-filter-key="sta1 day1 time1 co1 pla5 ">
             <p> <iframe src="kyuuzin serch/data-05.html" frameborder="0" width = "50%" height = "350"></iframe></p>
         </li>
-        <li data-filter-key="sta1 day1 time1 co1 pla6 ">
+        <li data-filter-key="sta1 day1 time1 co2 pla1 ">
             <p> <iframe src="kyuuzin serch/data-06.html" frameborder="0" width = "50%" height = "350"></iframe></p>
-        </li>
-        <li data-filter-key="sta2 day1 time1 co1 pla1 ">
-            <p> <iframe src="kyuuzin serch/data-07.html" frameborder="0" width = "50%" height = "350"></iframe></p>
     	</li>
-        <li data-filter-key="sta2 day1 time1 co1 pla2 ">
-			<p> <iframe src="kyuuzin serch/data-08.html" frameborder="0" width = "50%" height = "350"></iframe></p>
+        <li data-filter-key="sta1 day1 time1 co2 pla2 ">
+			<p> <iframe src="kyuuzin serch/data-07.html" frameborder="0" width = "50%" height = "350"></iframe></p>
 		</li>
-        <li data-filter-key="sta2 day1 time1 co1 pla3 ">
+        <li data-filter-key="sta1 day1 time1 co2 pla3 ">
+            <p> <iframe src="kyuuzin serch/data-08.html" frameborder="0" width = "50%" height = "350"></iframe></p>
+        </li>
+        <li data-filter-key="sta1 day1 time1 co2 pla4 ">
             <p> <iframe src="kyuuzin serch/data-09.html" frameborder="0" width = "50%" height = "350"></iframe></p>
         </li>
-        <li data-filter-key="sta2 day1 time1 co1 pla4 ">
+        <li data-filter-key="sta1 day1 time1 co2 pla5 ">
             <p> <iframe src="kyuuzin serch/data-10.html" frameborder="0" width = "50%" height = "350"></iframe></p>
         </li>
-        <li data-filter-key="sta2 day1 time1 co1 pla5 ">
+        <li data-filter-key="sta1 day1 time1 co3 pla1 ">
             <p> <iframe src="kyuuzin serch/data-11.html" frameborder="0" width = "50%" height = "350"></iframe></p>
-        </li>
-        <li data-filter-key="sta2 day1 time1 co1 pla6 ">
-            <p> <iframe src="kyuuzin serch/data-12.html" frameborder="0" width = "50%" height = "350"></iframe></p>
-        </li>
-        <li data-filter-key="sta3 day1 time1 co1 pla1 ">
-            <p> <iframe src="kyuuzin serch/data-13.html" frameborder="0" width = "50%" height = "350"></iframe></p>
     	</li>
-		<li data-filter-key="sta3 day1 time1 co1 pla2 ">
-			<p> <iframe src="kyuuzin serch/data-14.html" frameborder="0" width = "50%" height = "350"></iframe></p>
+		<li data-filter-key="sta1 day1 time1 co3 pla2 ">
+			<p> <iframe src="kyuuzin serch/data-12.html" frameborder="0" width = "50%" height = "350"></iframe></p>
 		</li>
-        <li data-filter-key="sta3 day1 time1 co1 pla3 ">
+        <li data-filter-key="sta1 day1 time1 co3 pla3 ">
+            <p> <iframe src="kyuuzin serch/data-13.html" frameborder="0" width = "50%" height = "350"></iframe></p>
+        </li>
+        <li data-filter-key="sta1 day1 time1 co3 pla4 ">
+            <p> <iframe src="kyuuzin serch/data-14.html" frameborder="0" width = "50%" height = "350"></iframe></p>
+        </li>
+        <li data-filter-key="sta1 day1 time1 co3 pla5 ">
             <p> <iframe src="kyuuzin serch/data-15.html" frameborder="0" width = "50%" height = "350"></iframe></p>
         </li>
-        <li data-filter-key="sta3 day1 time1 co1 pla4 ">
+        <li data-filter-key="sta1 day1 time1 co4 pla1 ">
             <p> <iframe src="kyuuzin serch/data-16.html" frameborder="0" width = "50%" height = "350"></iframe></p>
         </li>
-        <li data-filter-key="sta3 day1 time1 co1 pla5 ">
-            <p> <iframe src="kyuuzin serch/data-17.html" frameborder="0" width = "50%" height = "350"></iframe></p>
+        <li data-filter-key="sta1 day1 time1 co4 pla2 ">
         </li>
-        <li data-filter-key="sta3 day1 time1 co1 pla6 ">
-            <p> <iframe src="kyuuzin serch/data-18.html" frameborder="0" width = "50%" height = "350"></iframe></p>
+        <li data-filter-key="sta1 day1 time1 co4 pla3 ">
+        </li>
+        <li data-filter-key="sta1 day1 time1 co4 pla4 ">
+        </li>
+        <li data-filter-key="sta1 day1 time1 co4 pla5 ">
+        </li>
+        <li data-filter-key="sta1 day1 time1 co5 pla1 ">
+        </li>
+        <li data-filter-key="sta1 day1 time1 co5 pla2 ">
+        </li>
+        <li data-filter-key="sta1 day1 time1 co5 pla3 ">
+        </li>
+        <li data-filter-key="sta1 day1 time1 co5 pla4 ">
+        </li>
+        <li data-filter-key="sta1 day1 time1 co5 pla5 ">
+        </li>
+        <li data-filter-key="sta1 day1 time1 co6 pla1 ">
+        </li>
+        <li data-filter-key="sta1 day1 time1 co6 pla2 ">
+        </li>
+        <li data-filter-key="sta1 day1 time1 co6 pla3 ">
+        </li>
+        <li data-filter-key="sta1 day1 time1 co6 pla4 ">
+        </li>
+        <li data-filter-key="sta1 day1 time1 co6 pla5 ">
+        </li>
+        <li data-filter-key="sta1 day1 time1 co7 pla1 ">
+        </li>
+        <li data-filter-key="sta1 day1 time1 co7 pla2 ">
+        </li>
+        <li data-filter-key="sta1 day1 time1 co7 pla3 ">
+        </li>
+        <li data-filter-key="sta1 day1 time1 co7 pla4 ">
+        </li>
+        <li data-filter-key="sta1 day1 time1 co7 pla5 ">
+        </li>
+        <li data-filter-key="sta1 day1 time2 co1 pla1 ">
+    	</li>
+		<li data-filter-key="sta1 day1 time2 co1 pla2 ">
+		</li>
+        <li data-filter-key="sta1 day1 time2 co1 pla3 ">
+        </li>
+        <li data-filter-key="sta1 day1 time2 co1 pla4 ">
+        </li>
+        <li data-filter-key="sta1 day1 time2 co1 pla5 ">
+        </li>
+        <li data-filter-key="sta1 day1 time2 co2 pla1 ">
+    	</li>
+        <li data-filter-key="sta1 day1 time2 co2 pla2 ">
+		</li>
+        <li data-filter-key="sta1 day1 time2 co2 pla3 ">
+        </li>
+        <li data-filter-key="sta1 day1 time2 co2 pla4 ">
+        </li>
+        <li data-filter-key="sta1 day1 time2 co2 pla5 ">
+        </li>
+        <li data-filter-key="sta1 day1 time2 co3 pla1 ">
+    	</li>
+		<li data-filter-key="sta1 day1 time2 co3 pla2 ">
+		</li>
+        <li data-filter-key="sta1 day1 time2 co3 pla3 ">
+        </li>
+        <li data-filter-key="sta1 day1 time2 co3 pla4 ">
+        </li>
+        <li data-filter-key="sta1 day1 time2 co3 pla5 ">
+        </li>
+        <li data-filter-key="sta1 day1 time2 co4 pla1 ">
+        </li>
+        <li data-filter-key="sta1 day1 time2 co4 pla2 ">
+        </li>
+        <li data-filter-key="sta1 day1 time2 co4 pla3 ">
+        </li>
+        <li data-filter-key="sta1 day1 time2 co4 pla4 ">
+        </li>
+        <li data-filter-key="sta1 day1 time2 co4 pla5 ">
+        </li>
+        <li data-filter-key="sta1 day1 time2 co5 pla1 ">
+        </li>
+        <li data-filter-key="sta1 day1 time2 co5 pla2 ">
+        </li>
+        <li data-filter-key="sta1 day1 time2 co5 pla3 ">
+        </li>
+        <li data-filter-key="sta1 day1 time2 co5 pla4 ">
+        </li>
+        <li data-filter-key="sta1 day1 time2 co5 pla5 ">
+        </li>
+        <li data-filter-key="sta1 day1 time2 co6 pla1 ">
+        </li>
+        <li data-filter-key="sta1 day1 time2 co6 pla2 ">
+        </li>
+        <li data-filter-key="sta1 day1 time2 co6 pla3 ">
+        </li>
+        <li data-filter-key="sta1 day1 time2 co6 pla4 ">
+        </li>
+        <li data-filter-key="sta1 day1 time2 co6 pla5 ">
+        </li>
+        <li data-filter-key="sta1 day1 time2 co7 pla1 ">
+        </li>
+        <li data-filter-key="sta1 day1 time2 co7 pla2 ">
+        </li>
+        <li data-filter-key="sta1 day1 time2 co7 pla3 ">
+        </li>
+        <li data-filter-key="sta1 day1 time2 co7 pla4 ">
+        </li>
+        <li data-filter-key="sta1 day1 time2 co7 pla5 ">
+        </li>
+        <li data-filter-key="sta1 day2 time1 co1 pla1 ">
+            <p> <iframe src="kyuuzin serch/data-01.html" frameborder="0" width = "50%" height = "350"></iframe></p>
+    	</li>
+		<li data-filter-key="sta1 day2 time1 co1 pla2 ">
+			<p> <iframe src="kyuuzin serch/data-02.html" frameborder="0" width = "50%" height = "350"></iframe></p>
+		</li>
+        <li data-filter-key="sta1 day2 time1 co1 pla3 ">
+            <p> <iframe src="kyuuzin serch/data-03.html" frameborder="0" width = "50%" height = "350"></iframe></p>
+        </li>
+        <li data-filter-key="sta1 day2 time1 co1 pla4 ">
+            <p> <iframe src="kyuuzin serch/data-04.html" frameborder="0" width = "50%" height = "350"></iframe></p>
+        </li>
+        <li data-filter-key="sta1 day2 time1 co1 pla5 ">
+            <p> <iframe src="kyuuzin serch/data-05.html" frameborder="0" width = "50%" height = "350"></iframe></p>
+        </li>
+        <li data-filter-key="sta1 day2 time1 co2 pla1 ">
+            <p> <iframe src="kyuuzin serch/data-06.html" frameborder="0" width = "50%" height = "350"></iframe></p>
+    	</li>
+        <li data-filter-key="sta1 day2 time1 co2 pla2 ">
+			<p> <iframe src="kyuuzin serch/data-07.html" frameborder="0" width = "50%" height = "350"></iframe></p>
+		</li>
+        <li data-filter-key="sta1 day2 time1 co2 pla3 ">
+            <p> <iframe src="kyuuzin serch/data-08.html" frameborder="0" width = "50%" height = "350"></iframe></p>
+        </li>
+        <li data-filter-key="sta1 day2 time1 co2 pla4 ">
+            <p> <iframe src="kyuuzin serch/data-09.html" frameborder="0" width = "50%" height = "350"></iframe></p>
+        </li>
+        <li data-filter-key="sta1 day2 time1 co2 pla5 ">
+            <p> <iframe src="kyuuzin serch/data-10.html" frameborder="0" width = "50%" height = "350"></iframe></p>
+        </li>
+        <li data-filter-key="sta1 day2 time1 co3 pla1 ">
+            <p> <iframe src="kyuuzin serch/data-11.html" frameborder="0" width = "50%" height = "350"></iframe></p>
+    	</li>
+		<li data-filter-key="sta1 day2 time1 co3 pla2 ">
+			<p> <iframe src="kyuuzin serch/data-12.html" frameborder="0" width = "50%" height = "350"></iframe></p>
+		</li>
+        <li data-filter-key="sta1 day2 time1 co3 pla3 ">
+            <p> <iframe src="kyuuzin serch/data-13.html" frameborder="0" width = "50%" height = "350"></iframe></p>
+        </li>
+        <li data-filter-key="sta1 day2 time1 co3 pla4 ">
+            <p> <iframe src="kyuuzin serch/data-14.html" frameborder="0" width = "50%" height = "350"></iframe></p>
+        </li>
+        <li data-filter-key="sta1 day2 time1 co3 pla5 ">
+            <p> <iframe src="kyuuzin serch/data-15.html" frameborder="0" width = "50%" height = "350"></iframe></p>
+        </li>
+        <li data-filter-key="sta1 day2 time1 co4 pla1 ">
+        </li>
+        <li data-filter-key="sta1 day2 time1 co4 pla2 ">
+        </li>
+        <li data-filter-key="sta1 day2 time1 co4 pla3 ">
+        </li>
+        <li data-filter-key="sta1 day2 time1 co4 pla4 ">
+        </li>
+        <li data-filter-key="sta1 day2 time1 co4 pla5 ">
+        </li>
+        <li data-filter-key="sta1 day2 time1 co5 pla1 ">
+        </li>
+        <li data-filter-key="sta1 day2 time1 co5 pla2 ">
+        </li>
+        <li data-filter-key="sta1 day2 time1 co5 pla3 ">
+        </li>
+        <li data-filter-key="sta1 day2 time1 co5 pla4 ">
+        </li>
+        <li data-filter-key="sta1 day2 time1 co5 pla5 ">
+        </li>
+        <li data-filter-key="sta1 day2 time1 co6 pla1 ">
+        </li>
+        <li data-filter-key="sta1 day2 time1 co6 pla2 ">
+        </li>
+        <li data-filter-key="sta1 day2 time1 co6 pla3 ">
+        </li>
+        <li data-filter-key="sta1 day2 time1 co6 pla4 ">
+        </li>
+        <li data-filter-key="sta1 day2 time1 co6 pla5 ">
+        </li>
+        <li data-filter-key="sta1 day2 time1 co7 pla1 ">
+        </li>
+        <li data-filter-key="sta1 day2 time1 co7 pla2 ">
+        </li>
+        <li data-filter-key="sta1 day2 time1 co7 pla3 ">
+        </li>
+        <li data-filter-key="sta1 day2 time1 co7 pla4 ">
+        </li>
+        <li data-filter-key="sta1 day2 time1 co7 pla5 ">
+        </li>
+        <li data-filter-key="sta1 day2 time2 co1 pla1 ">
+    	</li>
+		<li data-filter-key="sta1 day2 time2 co1 pla2 ">
+		</li>
+        <li data-filter-key="sta1 day2 time2 co1 pla3 ">
+        </li>
+        <li data-filter-key="sta1 day2 time2 co1 pla4 ">
+        </li>
+        <li data-filter-key="sta1 day2 time2 co1 pla5 ">
+        </li>
+        <li data-filter-key="sta1 day2 time2 co2 pla1 ">
+    	</li>
+        <li data-filter-key="sta1 day2 time2 co2 pla2 ">
+		</li>
+        <li data-filter-key="sta1 day2 time2 co2 pla3 ">
+        </li>
+        <li data-filter-key="sta1 day2 time2 co2 pla4 ">
+        </li>
+        <li data-filter-key="sta1 day2 time2 co2 pla5 ">
+        </li>
+        <li data-filter-key="sta1 day2 time2 co3 pla1 ">
+    	</li>
+		<li data-filter-key="sta1 day2 time2 co3 pla2 ">
+		</li>
+        <li data-filter-key="sta1 day2 time2 co3 pla3 ">
+        </li>
+        <li data-filter-key="sta1 day2 time2 co3 pla4 ">
+        </li>
+        <li data-filter-key="sta1 day2 time2 co3 pla5 ">
+        </li>
+        <li data-filter-key="sta1 day2 time2 co4 pla1 ">
+        </li>
+        <li data-filter-key="sta1 day2 time2 co4 pla2 ">
+        </li>
+        <li data-filter-key="sta1 day2 time2 co4 pla3 ">
+        </li>
+        <li data-filter-key="sta1 day2 time2 co4 pla4 ">
+        </li>
+        <li data-filter-key="sta1 day2 time2 co4 pla5 ">
+        </li>
+        <li data-filter-key="sta1 day2 time2 co5 pla1 ">
+        </li>
+        <li data-filter-key="sta1 day2 time2 co5 pla2 ">
+        </li>
+        <li data-filter-key="sta1 day2 time2 co5 pla3 ">
+        </li>
+        <li data-filter-key="sta1 day2 time2 co5 pla4 ">
+        </li>
+        <li data-filter-key="sta1 day2 time2 co5 pla5 ">
+        </li>
+        <li data-filter-key="sta1 day2 time2 co6 pla1 ">
+        </li>
+        <li data-filter-key="sta1 day2 time2 co6 pla2 ">
+        </li>
+        <li data-filter-key="sta1 day2 time2 co6 pla3 ">
+        </li>
+        <li data-filter-key="sta1 day2 time2 co6 pla4 ">
+        </li>
+        <li data-filter-key="sta1 day2 time2 co6 pla5 ">
+        </li>
+        <li data-filter-key="sta1 day2 time2 co7 pla1 ">
+        </li>
+        <li data-filter-key="sta1 day2 time2 co7 pla2 ">
+        </li>
+        <li data-filter-key="sta1 day2 time2 co7 pla3 ">
+        </li>
+        <li data-filter-key="sta1 day2 time2 co7 pla4 ">
+        </li>
+        <li data-filter-key="sta1 day2 time2 co7 pla5 ">
         </li>
 </div>
 </article>

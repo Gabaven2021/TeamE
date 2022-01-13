@@ -5,3 +5,24 @@
       list-style-type: none;
     }
     body {margin: 0px; padding: 0px;}
+
+.table{
+  border-collapse: collapse;
+  margin: 0 auto;
+}
+.table-img,
+.table-txt{
+  vertical-align: top;
+  width: 300px;
+}
+.table-img{
+  background: #f0e68c;
+}
+.table-img > img{
+  width: 100%;
+}
+.table-txt{
+  background: #d2b48c;
+}
+.content {display:block}
+
