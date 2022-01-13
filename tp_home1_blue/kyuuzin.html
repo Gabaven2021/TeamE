@@ -22,69 +22,85 @@
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 <![endif]-->
 <script>
-
-    function hyoji1(num)
-    {
-      if (num == 0)
-      {
-        document.getElementById("disp").style.display="block";
-      }
-      else
-      {
-        document.getElementById("disp").style.display="none";
-      }
-    }
-    function isCheck() {
-    var arr_checkBoxes = document.getElementsByClassName("check");
-    var count = 0;
-    for (var i = 0; i < arr_checkBoxes.length; i++) {
-        if (arr_checkBoxes[i].checked) {
-            count++;
-        }
-    }
-    if (count > 0) {
-        return true;
+    
+$(function() {
+  // 1. 「全選択」する
+  $('#all1').on('click', function() {
+    $("input[name='cat[sta][]").prop('checked', this.checked);
+  });
+  // 2. 「全選択」以外のチェックボックスがクリックされたら、
+  $("input[name='cat[sta][]").on('click', function() {
+    if ($('#boxes1 :checked').length == $('#boxes1 :input').length) {
+      // 全てのチェックボックスにチェックが入っていたら、「全選択」 = checked
+      $('#all1').prop('checked', true);
     } else {
-        window.alert("1つ以上選択してください。");
-        return false;
-    };
- 
-}
-
-// onClick="AllChecked(this.id);"を記載したidと同じ名前のclaaaのあるチェックボックス全てにチェックが付く
-function AllChecked(checks){
-  var all = document.getElementById(checks).checked;
-  var checks = document.getElementsByClassName(checks);
-  var checksArray = Array.prototype.slice.call(checks);
-  for (var i=0; i<checksArray.length; i++){
-    checksArray[i].checked = all;
-  }
-}
-
-// 一つでもチェックを外すと「onClick="DisChecked('checks1');"」の引数で指定したidのチェック外れる
-function DisChecked(checks0){
-  // console.log(checks);
-  var all = document.getElementById(checks0);
-  var checks = document.getElementsByClassName(checks0);
-  var checksArray = Array.prototype.slice.call(checks0);
-  var checksCount = 0;
-  for (var i=0; i<checksArray.length; i++){
-    if(checksArray[i].checked == false){
-      all.checked = false;
-    }else{
-      checksCount += 1;
-      if(checksCount == checks.length){
-        all.checked = true;
-      }
+      // 1つでもチェックが入っていたら、「全選択」 = checked
+      $('#all1').prop('checked', false);
     }
-  }
-}
+  });
+
+      // 1. 「全選択」する
+  $('#all2').on('click', function() {
+    $("input[name='cat[day][]").prop('checked', this.checked);
+  });
+  // 2. 「全選択」以外のチェックボックスがクリックされたら、
+  $("input[name='cat[day][]").on('click', function() {
+    if ($('#boxes2 :checked').length == $('#boxes2 :input').length) {
+      // 全てのチェックボックスにチェックが入っていたら、「全選択」 = checked
+      $('#all2').prop('checked', true);
+    } else {
+      // 1つでもチェックが入っていたら、「全選択」 = checked
+      $('#all2').prop('checked', false);
+    }
+  });
+
+ // 1. 「全選択」する
+ $('#all3').on('click', function() {
+    $("input[name='cat[time][]").prop('checked', this.checked);
+  });
+  // 2. 「全選択」以外のチェックボックスがクリックされたら、
+  $("input[name='cat[time][]").on('click', function() {
+    if ($('#boxes3 :checked').length == $('#boxes3 :input').length) {
+      // 全てのチェックボックスにチェックが入っていたら、「全選択」 = checked
+      $('#all3').prop('checked', true);
+    } else {
+      // 1つでもチェックが入っていたら、「全選択」 = checked
+      $('#all3').prop('checked', false);
+    }
+  });
+
+  // 1. 「全選択」する
+ $('#all4').on('click', function() {
+    $("input[name='cat[co][]").prop('checked', this.checked);
+  });
+  // 2. 「全選択」以外のチェックボックスがクリックされたら、
+  $("input[name='cat[co][]").on('click', function() {
+    if ($('#boxes4 :checked').length == $('#boxes4 :input').length) {
+      // 全てのチェックボックスにチェックが入っていたら、「全選択」 = checked
+      $('#all4').prop('checked', true);
+    } else {
+      // 1つでもチェックが入っていたら、「全選択」 = checked
+      $('#all4').prop('checked', false);
+    }
+  });
+
+// 1. 「全選択」する
+$('#all5').on('click', function() {
+    $("input[name='cat[pla][]").prop('checked', this.checked);
+  });
+  // 2. 「全選択」以外のチェックボックスがクリックされたら、
+  $("input[name='cat[pla][]").on('click', function() {
+    if ($('#boxes5 :checked').length == $('#boxes5 :input').length) {
+      // 全てのチェックボックスにチェックが入っていたら、「全選択」 = checked
+      $('#all5').prop('checked', true);
+    } else {
+      // 1つでもチェックが入っていたら、「全選択」 = checked
+      $('#all5').prop('checked', false);
+    }
+  });
+
+});
 </script>
-<style>
-    .disp{
-    display:none;
-    }
-</style>
 </head>
 
 <body>
@@ -147,41 +163,56 @@ function DisChecked(checks0){
 <form>
     <h3>雇用形態</h3>
         <ul>
-            <li><label><input type="checkbox" class="checks0" name="cat[sta][]" value="sta1">パート・アルバイト</label></li>
-            <li><label><input type="checkbox" class="checks0" name="cat[sta][]" value="sta2">正社員</label></li>
-            <li><label><input type="checkbox" class="checks0" name="cat[sta][]" value="sta3">その他</label></li> 
+            <div id="boxes1">   
+            <li><label for="all1"><input type="checkbox" name="allChecked" id="all1">全選択</label></li>    
+            <li><label><input type="checkbox" name="cat[sta][]" value="sta1">パート・アルバイト</label></li>
+            <li><label><input type="checkbox" name="cat[sta][]" value="sta2">正社員</label></li>
+            <li><label><input type="checkbox" name="cat[sta][]" value="sta3">その他</label></li> 
+            </div>
         </ul>
     <hr>
     <h3>勤務日数</h3>
         <ul>
-            <li><label><input type="checkbox" class="check" name="cat[day][]" value="day1">週１～３日</label></li>
-            <li><label><input type="checkbox" class="check" name="cat[day][]" value="day2">週4日以上</label></li>
+            <li><label for="all2"><input type="checkbox" name="allChecked" id="all2">全選択</label></li>
+            <div id="boxes2">
+            <li><label><input type="checkbox" name="cat[day][]" value="day1">週１～３日</label></li>
+            <li><label><input type="checkbox" name="cat[day][]" value="day2">週4日以上</label></li>
+            </div>
         </ul>
     <hr>
     <h3>勤務時間</h3>
         <ul>
-            <li><label><input type="checkbox" class="check" name="cat[time][]" value="time1">～５時間</label></li>
-            <li><label><input type="checkbox" class="check" name="cat[time][]" value="time2">５～８時間</label></li>
+            <li><label for="all3"><input type="checkbox" name="allChecked" id="all3">全選択</label></li>
+            <div id="boxes3">
+            <li><label><input type="checkbox" name="cat[time][]" value="time1">～５時間</label></li>
+            <li><label><input type="checkbox" name="cat[time][]" value="time2">５～８時間</label></li>
+            </div>
         </ul>
     <hr>
     <h3>業務内容</h3>
         <ul>
-            <li><label><input type="checkbox" class="check" name="cat[co][]" value="co1">事務</label></li>
-            <li><label><input type="checkbox" class="check" name="cat[co][]" value="co2">技術職</label></li>
-            <li><label><input type="checkbox" class="check" name="cat[co][]" value="co3">営業</label></li>
-            <li><label><input type="checkbox" class="check" name="cat[co][]" value="co4">サービス業</label></li>
-            <li><label><input type="checkbox" class="check" name="cat[co][]" value="co5">軽作業</label></li>
-            <li><label><input type="checkbox" class="check" name="cat[co][]" value="co6">農業・林業</label></li>
-            <li><label><input type="checkbox" class="check" name="cat[co][]" value="co7">その他</label></li>
+            <li><label for="all4"><input type="checkbox" name="allChecked" id="all4">全選択</label></li>
+            <div id="boxes4">
+            <li><label><input type="checkbox" name="cat[co][]" value="co1">事務</label></li>
+            <li><label><input type="checkbox" name="cat[co][]" value="co2">技術職</label></li>
+            <li><label><input type="checkbox" name="cat[co][]" value="co3">営業</label></li>
+            <li><label><input type="checkbox" name="cat[co][]" value="co4">サービス業</label></li>
+            <li><label><input type="checkbox" name="cat[co][]" value="co5">軽作業</label></li>
+            <li><label><input type="checkbox" name="cat[co][]" value="co6">農業・林業</label></li>
+            <li><label><input type="checkbox" name="cat[co][]" value="co7">その他</label></li>
+            </div>
         </ul>
     <h3>勤務地</h3>
         <ul>
-            <li><label><input type="checkbox" class="check" name="cat[pla][]" value="pla1">北海道・東北</label></li>
-            <li><label><input type="checkbox" class="check" name="cat[pla][]" value="pla2">関東</label></li>
-            <li><label><input type="checkbox" class="check" name="cat[pla][]" value="pla3">中部</label></li>
-            <li><label><input type="checkbox" class="check" name="cat[pla][]" value="pla4">近畿</label></li>
-            <li><label><input type="checkbox" class="check" name="cat[pla][]" value="pla5">中国・四国</label></li>
-            <li><label><input type="checkbox" class="check" name="cat[pla][]" value="pla6">九州</label></li>
+            <li><label for="all5"><input type="checkbox" name="allChecked" id="all5">全選択</label></li>
+            <div id="boxes5">
+            <li><label><input type="checkbox" name="cat[pla][]" value="pla1">北海道・東北</label></li>
+            <li><label><input type="checkbox" name="cat[pla][]" value="pla2">関東</label></li>
+            <li><label><input type="checkbox" name="cat[pla][]" value="pla3">中部</label></li>
+            <li><label><input type="checkbox" name="cat[pla][]" value="pla4">近畿</label></li>
+            <li><label><input type="checkbox" name="cat[pla][]" value="pla5">中国・四国</label></li>
+            <li><label><input type="checkbox" name="cat[pla][]" value="pla6">九州</label></li>
+            </div>
         </ul>
     <button id="filterBtn" type="button" onclick="return isCheck() && hyoji1(0)">上記の条件で検索する</button>
     <button type="reset" onclick="hyoji1(1)">リセット</button>

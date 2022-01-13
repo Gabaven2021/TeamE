@@ -27,3 +27,31 @@ window.addEventListener('DOMContentLoaded', ()=>{
       });
     });
   });
+
+  function hyoji1(num)
+  {
+    if (num == 0)
+    {
+      document.getElementById("disp").style.display="block";
+    }
+    else
+    {
+      document.getElementById("disp").style.display="none";
+    }
+  }
+  function isCheck() {
+  var arr_checkBoxes = document.getElementsByClassName("check");
+  var count = 0;
+  for (var i = 0; i < arr_checkBoxes.length; i++) {
+      if (arr_checkBoxes[i].checked) {
+          count++;
+      }
+  }
+  if (count > 0) {
+      return true;
+  } else {
+      window.alert("1つ以上選択してください。");
+      return false;
+  };
+
+}

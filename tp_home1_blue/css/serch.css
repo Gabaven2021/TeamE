@@ -5,3 +5,10 @@
       list-style-type: none;
     }
     body {margin: 0px; padding: 0px;}
+
+    label, input[type='checkbox'] {
+      cursor: pointer;
+  }
+.disp{
+    display:none;
+    }
