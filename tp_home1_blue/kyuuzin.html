@@ -50,22 +50,35 @@
     };
  
 }
-$(function() {
-    // 1. 「全選択」する
-    $('#all').on('click', function() {
-      $("input[name='cat[sta][]']").prop('checked', this.checked);
-    });
-    // 2. 「全選択」以外のチェックボックスがクリックされたら、
-    $("input[name='cat[sta][]']").on('click', function() {
-      if ($('#boxes :checked').length == $('#boxes :input').length) {
-        // 全てのチェックボックスにチェックが入っていたら、「全選択」 = checked
-        $('#all').prop('checked', true);
-      } else {
-        // 1つでもチェックが入っていたら、「全選択」 = checked
-        $('#all').prop('checked', false);
+
+// onClick="AllChecked(this.id);"を記載したidと同じ名前のclaaaのあるチェックボックス全てにチェックが付く
+function AllChecked(checks){
+  var all = document.getElementById(checks).checked;
+  var checks = document.getElementsByClassName(checks);
+  var checksArray = Array.prototype.slice.call(checks);
+  for (var i=0; i<checksArray.length; i++){
+    checksArray[i].checked = all;
+  }
+}
+
+// 一つでもチェックを外すと「onClick="DisChecked('checks1');"」の引数で指定したidのチェック外れる
+function DisChecked(checks0){
+  // console.log(checks);
+  var all = document.getElementById(checks0);
+  var checks = document.getElementsByClassName(checks0);
+  var checksArray = Array.prototype.slice.call(checks0);
+  var checksCount = 0;
+  for (var i=0; i<checksArray.length; i++){
+    if(checksArray[i].checked == false){
+      all.checked = false;
+    }else{
+      checksCount += 1;
+      if(checksCount == checks.length){
+        all.checked = true;
       }
-    });
-  });
+    }
+  }
+}
 </script>
 <style>
     .disp{
@@ -133,50 +146,43 @@ $(function() {
 
 <form>
     <h3>雇用形態</h3>
-    <ul method="post" action="#">
-        <label for="all"><input type="checkbox" name="allChecked" id="all">全選択</label>
-        <div id="boxes">
-            <li><label><input type="checkbox" class="check" name="cat[sta][]" value="sta1">パート・アルバイト</label></li>
-            <li><label><input type="checkbox" class="check" name="cat[sta][]" value="sta2">正社員</label></li>
-            <li><label><input type="checkbox" class="check" name="cat[sta][]" value="sta3">その他</label></li>
-        
-    </ul>
+        <ul>
+            <li><label><input type="checkbox" class="checks0" name="cat[sta][]" value="sta1">パート・アルバイト</label></li>
+            <li><label><input type="checkbox" class="checks0" name="cat[sta][]" value="sta2">正社員</label></li>
+            <li><label><input type="checkbox" class="checks0" name="cat[sta][]" value="sta3">その他</label></li> 
+        </ul>
     <hr>
     <h3>勤務日数</h3>
-    <ul>
-        <label><input id="checkAll" type="checkbox" class="check" name="cat[day][]" value="">すべて</label>
-    <li><label><input type="checkbox" class="check" name="cat[day][]" value="day1">週１～３日</label></li>
-    <li><label><input type="checkbox" class="check" name="cat[day][]" value="day2">週4日以上</label></li>
-    </ul>
+        <ul>
+            <li><label><input type="checkbox" class="check" name="cat[day][]" value="day1">週１～３日</label></li>
+            <li><label><input type="checkbox" class="check" name="cat[day][]" value="day2">週4日以上</label></li>
+        </ul>
     <hr>
     <h3>勤務時間</h3>
-    <ul>
-        <label><input id="checkAll" type="checkbox" class="check" name="cat[time][]" value="">すべて</label>
-    <li><label><input type="checkbox" class="check" name="cat[time][]" value="time1">～５時間</label></li>
-    <li><label><input type="checkbox" class="check" name="cat[time][]" value="time2">５～８時間</label></li>
-    </ul>
+        <ul>
+            <li><label><input type="checkbox" class="check" name="cat[time][]" value="time1">～５時間</label></li>
+            <li><label><input type="checkbox" class="check" name="cat[time][]" value="time2">５～８時間</label></li>
+        </ul>
     <hr>
     <h3>業務内容</h3>
-    <ul>
-        <label><input id="checkAll" type="checkbox" class="check" name="cat[co][]" value="">すべて</label>
-    <li><label><input type="checkbox" class="check" name="cat[co][]" value="co1">事務</label></li>
-    <li><label><input type="checkbox" class="check" name="cat[co][]" value="co2">技術職</label></li>
-    <li><label><input type="checkbox" class="check" name="cat[co][]" value="co3">営業</label></li>
-    <li><label><input type="checkbox" class="check" name="cat[co][]" value="co4">サービス業</label></li>
-    <li><label><input type="checkbox" class="check" name="cat[co][]" value="co5">軽作業</label></li>
-    <li><label><input type="checkbox" class="check" name="cat[co][]" value="co6">農業・林業</label></li>
-    <li><label><input type="checkbox" class="check" name="cat[co][]" value="co7">その他</label></li>
-    </ul>
+        <ul>
+            <li><label><input type="checkbox" class="check" name="cat[co][]" value="co1">事務</label></li>
+            <li><label><input type="checkbox" class="check" name="cat[co][]" value="co2">技術職</label></li>
+            <li><label><input type="checkbox" class="check" name="cat[co][]" value="co3">営業</label></li>
+            <li><label><input type="checkbox" class="check" name="cat[co][]" value="co4">サービス業</label></li>
+            <li><label><input type="checkbox" class="check" name="cat[co][]" value="co5">軽作業</label></li>
+            <li><label><input type="checkbox" class="check" name="cat[co][]" value="co6">農業・林業</label></li>
+            <li><label><input type="checkbox" class="check" name="cat[co][]" value="co7">その他</label></li>
+        </ul>
     <h3>勤務地</h3>
-    <ul>
-        <label><input id="checkAll" type="checkbox" class="check" name="cat[pla][]" value="">すべて</label>
-    <li><label><input type="checkbox" class="check" name="cat[pla][]" value="pla1">北海道・東北</label></li>
-    <li><label><input type="checkbox" class="check" name="cat[pla][]" value="pla2">関東</label></li>
-    <li><label><input type="checkbox" class="check" name="cat[pla][]" value="pla3">中部</label></li>
-    <li><label><input type="checkbox" class="check" name="cat[pla][]" value="pla4">近畿</label></li>
-    <li><label><input type="checkbox" class="check" name="cat[pla][]" value="pla5">中国・四国</label></li>
-    <li><label><input type="checkbox" class="check" name="cat[pla][]" value="pla6">九州</label></li>
-    </ul>
+        <ul>
+            <li><label><input type="checkbox" class="check" name="cat[pla][]" value="pla1">北海道・東北</label></li>
+            <li><label><input type="checkbox" class="check" name="cat[pla][]" value="pla2">関東</label></li>
+            <li><label><input type="checkbox" class="check" name="cat[pla][]" value="pla3">中部</label></li>
+            <li><label><input type="checkbox" class="check" name="cat[pla][]" value="pla4">近畿</label></li>
+            <li><label><input type="checkbox" class="check" name="cat[pla][]" value="pla5">中国・四国</label></li>
+            <li><label><input type="checkbox" class="check" name="cat[pla][]" value="pla6">九州</label></li>
+        </ul>
     <button id="filterBtn" type="button" onclick="return isCheck() && hyoji1(0)">上記の条件で検索する</button>
     <button type="reset" onclick="hyoji1(1)">リセット</button>
 </form>
