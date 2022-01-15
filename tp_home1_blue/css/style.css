@@ -91,12 +91,12 @@ header #logo {
 	color: #FFF;		/*文字色*/
 	padding: 3px 15px;	/*上下、左右へのボックス内の余白*/
 	border-radius: 4px;	/*角丸のサイズ*/
-	border: 1px solid #6dc7fc;	/*枠線の幅、線種、色*/
+	border: 1px solid #032a7e;	/*枠線の幅、線種、色*/
 }
 /*マウスオン時*/
 #headermenu li a:hover {
 	color: #ff8a00;	/*文字色*/
-	background: #6dc7fc;	/*背景色*/
+	background: #cad8f8;	/*背景色*/
 }
 
 /*文字サイズ変更ボタン（※文字サイズを「大」にした時の設定はchange.cssで行う）
@@ -815,7 +815,7 @@ header #logo {
 .ws,.wl {width: 94%;}
 
 }
-/*boxの追加(riyousyamuke.html、info.htmlで使用)*/
+/*boxの追加(service.html、info.htmlで使用)*/
 .box7{
     padding: 0.5em 1em;
     margin: 2em 0;
@@ -847,7 +847,7 @@ header #logo {
 	display: inline-block;
 	text-decoration: none;
 	background: #87befd;
-	color: #FFF;
+	color:#FFF(255, 255, 255);
 	width: 120px;
 	height: 120px;
 	line-height: 120px;
