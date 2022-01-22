@@ -381,7 +381,7 @@ header #logo {
 	margin-bottom: 0px;
 }
 
-/*サブコンテンツ内のbox2（「障がい者向け求人サイト：teamEとは？」と「スタッフ募集中」のバナー）
+/*サブコンテンツ内のbox2（「障がい者向け就職支援アプリとは？」と「スタッフ募集中」のバナー）
 ---------------------------------------------------------------------------*/
 #sub .box2 {
 	margin-bottom: 15px;	/*ボックスの下に空けるスペース*/
@@ -399,7 +399,7 @@ header #logo {
 #sub .box2 a:hover {
 	border: solid 3px #000096;	/*枠線の線種、幅、色*/
 }
-/*「障がい者向け求人サイト：teamEとは？」の背景設定*/
+/*「障がい者向け就職支援アプリとは？」の背景設定*/
 #sub .box2.about {
 	background: #edf5fa url(../images/logo_mark.png) no-repeat right center / 100px;	/*背景色、背景画像の読み込み。高さ100px。*/
 }
